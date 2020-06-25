@@ -1,4 +1,6 @@
-package com.vtb.kortunov.lesson3.task2;
+package com.vtb.kortunov.lesson3.barrier;
+
+import com.vtb.kortunov.lesson3.member.Member;
 
 public class RunningTrack implements Barrier {
 
@@ -9,7 +11,7 @@ public class RunningTrack implements Barrier {
     }
 
     @Override
-    public boolean overcome(Member member) {
-        return member.getRunLength() >= length;
+    public boolean reach(Member member) {
+        return member.run(length);
     }
 }
